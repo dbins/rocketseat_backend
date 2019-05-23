@@ -68,10 +68,23 @@ class UserController {
           });
         });
       }
+      //Retornando os dados atualizados!
+      const user_updated = await User.findByOrFail("id", user_id);
+      const preferences_updated = await UserPreference.query()
+        .select("preferences.*")
+        .innerJoin(
+          "preferences",
+          "user_preferences.preference_id",
+          "preferences.id"
+        )
+        .where("user_preferences.user_id", user_id)
+        .fetch();
+      user_updated.preferences = preferences_updated;
 
-      return response
-        .status(201)
-        .json({ message: "Usuário atualizado com sucesso!" });
+      return response.status(201).json({
+        message: "Usuário atualizado com sucesso!",
+        user: user_updated
+      });
     } catch (err) {
       return response.status(err.status).send({ message: err.message });
     }

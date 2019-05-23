@@ -67,9 +67,65 @@ API do desafio final da RocketSeat feita com AdonisJS + banco de dados MySQL!
 
 			{
 				"message": "Login realizado com sucesso",
-				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjQ4LCJpYXQiOjE1NTcwODQzMTN9.uJ-yVN3oAzuLQ7pz0PU4UK7DggGf1VGnXN3XZZzDZHk",
-				"user_id": 48,
-				"username": "Bins2"
+				"user": {
+					"id": 67,
+					"username": "Bins",
+					"email": "bins22@ig.com.br",
+					"password": "$2a$10$Qk5RWCW9hFcssle8.Ro4PunagPKoKkaeAMw7.N45E7ViUHBw8Wxii",
+					"created_at": "2019-05-21 23:11:34",
+					"updated_at": "2019-05-21 23:12:57",
+					"preferences": [
+						{
+							"id": 1,
+							"name": "Teste 1",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 2,
+							"name": "Teste 2",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 3,
+							"name": "Teste 3",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 4,
+							"name": "Teste 4",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 5,
+							"name": "Front-end",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 6,
+							"name": "Back-end",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 7,
+							"name": "Mobile",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 8,
+							"name": "DevOps",
+							"created_at": null,
+							"updated_at": null
+						}
+					]
+				}
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjQ4LCJpYXQiOjE1NTcwODQzMTN9.uJ-yVN3oAzuLQ7pz0PU4UK7DggGf1VGnXN3XZZzDZHk"
 			}
 
 
@@ -209,7 +265,66 @@ Rotas referentes ao perfil do usuário
 	- Body
 	
 			{
-				"message": "Usuário atualizado com sucesso!"
+				"message": "Usuário atualizado com sucesso!",
+				"user": {
+					"id": 67,
+					"username": "Bins Atualizado",
+					"email": "dia217@ig.com.br",
+					"password": "$2a$10$Qk5RWCW9hFcssle8.Ro4PunagPKoKkaeAMw7.N45E7ViUHBw8Wxii",
+					"created_at": "2019-05-21 23:11:34",
+					"updated_at": "2019-05-21 23:12:57",
+					"preferences": [
+						{
+							"id": 1,
+							"name": "Teste 1",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 2,
+							"name": "Teste 2",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 3,
+							"name": "Teste 3",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 4,
+							"name": "Teste 4",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 5,
+							"name": "Front-end",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 6,
+							"name": "Back-end",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 7,
+							"name": "Mobile",
+							"created_at": null,
+							"updated_at": null
+						},
+						{
+							"id": 8,
+							"name": "DevOps",
+							"created_at": null,
+							"updated_at": null
+						}
+					]
+				}
+				
 			}
 
 # Group Files

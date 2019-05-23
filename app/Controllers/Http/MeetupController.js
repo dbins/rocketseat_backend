@@ -30,7 +30,6 @@ class MeetupController {
       .whereDoesntHave("subscriptions", builder => {
         builder.where("user_id", user_id);
       })
-      .whereRaw(whereLikeTitle)
       .orderBy("datetime", "ASC")
       .withCount("subscriptions")
       .fetch();
@@ -40,7 +39,6 @@ class MeetupController {
       .leftJoin("meetup_users", "meetup_users.meetup_id", "meetups.id")
       .where("datetime", ">", now)
       .where("meetup_users.user_id", user_id)
-      .whereRaw(whereLikeTitle)
       .orderBy("datetime", "ASC")
       .withCount("subscriptions")
       .fetch();
@@ -70,16 +68,30 @@ class MeetupController {
         builder.where("user_id", user_id);
       })
       .whereIn("meetup_preferences.preference_id", user_preferences)
-      .whereRaw(whereLikeTitle)
       .groupBy("meetups.id")
       .orderBy("datetime", "ASC")
       .withCount("subscriptions")
       .fetch();
-
+	  
+	  
+	  
+	  const searchMeetups = await Meetup.query()
+      .select("meetups.*")
+      .with("file")
+      .where("datetime", ">", now)
+      .whereDoesntHave("subscriptions", builder => {
+        builder.where("user_id", user_id);
+      })
+      .whereRaw(whereLikeTitle)
+      .orderBy("datetime", "ASC")
+      .withCount("subscriptions")
+      .fetch();
+    
     return response.status(201).json({
       nextMeetups: nextMeetups.toJSON(),
       subscriptions: subscriptions.toJSON(),
-      nextRecommended: nextRecommended.toJSON()
+      nextRecommended: nextRecommended.toJSON(),
+	  search: searchMeetups.toJSON()
     });
   }
 
