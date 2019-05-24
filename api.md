@@ -504,6 +504,28 @@ Rota com os dados do Meetups
 					},
 					"__meta__": {
 						"subscriptions_count": 0
+					}],
+				"search": [
+					"id": 5,
+					"title": "teste",
+					"description": "meetup de testes",
+					"location": "São Paulo -SP",
+					"datetime": "2019-05-10T13:00:00.000Z",
+					"file_id": 3,
+					"created_at": "2019-05-05 17:36:14",
+					"updated_at": "2019-05-05 17:36:14",
+					"urlimagem": "http://192.168.9.1:3333/files/3",
+					"file": {
+						"id": 3,
+						"file": "1557088194989.jpeg",
+						"name": "0_11b748_d4d498a0_XXL.jpg",
+						"type": "image",
+						"subtype": "jpeg",
+						"created_at": "2019-05-05 17:29:54",
+						"updated_at": "2019-05-05 17:29:54"
+					},
+					"__meta__": {
+						"subscriptions_count": 0
 					}]
 			}
 

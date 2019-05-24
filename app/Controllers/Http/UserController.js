@@ -60,13 +60,14 @@ class UserController {
         await UserPreference.query()
           .where("user_id", user_id)
           .delete();
-
-        preferences.forEach(async preference_id => {
-          await UserPreference.create({
-            user_id: user_id,
-            preference_id: preference_id
-          });
+		
+		let selectedPreferences = [];
+        preferences.forEach(preference_id => {
+		  selectedPreferences.push({user_id: user_id, preference_id: preference_id})
         });
+		
+		await UserPreference.createMany(selectedPreferences);
+		
       }
       //Retornando os dados atualizados!
       const user_updated = await User.findByOrFail("id", user_id);
@@ -80,7 +81,6 @@ class UserController {
         .where("user_preferences.user_id", user_id)
         .fetch();
       user_updated.preferences = preferences_updated;
-
       return response.status(201).json({
         message: "Usuário atualizado com sucesso!",
         user: user_updated
