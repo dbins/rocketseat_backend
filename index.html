@@ -5,222 +5,474 @@
   "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"bins22@ig.com.br"</span></span>,
   "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"1234576"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-
-    "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Usuário gravado com sucesso!"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+  "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+      </span>}
+    ]</span>,
+    "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Retorno da operação"</span>
+    </span>}</span>,
     "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"Biin1s231"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"biins111223@ig.com.br"</span></span>,
-    "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"$2a$10\$Fw1Nk5YFS3v7XU2DqK3rWuOhxbAStOJz30MaNS8/cukcUpuoYydsK"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 16:29:57"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 16:29:57"</span></span>,
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">52</span>
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do usuário"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">username</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nome do usuário"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"E-mail do usuário, deve ser único"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">password</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Senha criptografada"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de criação"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de atualização"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Array de objetos Preference"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"tipo de token"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Token criptografado"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Tempo de vida do token"</span>
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados do token"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados do usuário"</span>
     </span>}</span>,
     "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"bearer"</span></span>,
-        "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUyLCJpYXQiOjE1NTcwODQ1OTd9.d0LDChT503W263fazumB2Hp31xb1DCxu4WEkuMozjgg"</span></span>,
-        "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"tipo de token"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Token criptografado"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Tempo de vida do token"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados do token"</span>
     </span>}
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="usuário-login-do-usuário" class="resource"><h3 class="resource-heading">Login do usuário <a href="#usuário-login-do-usuário" class="permalink">&nbsp;&para;</a></h3><div id="usuário-login-do-usuário-post" class="action post"><h4 class="action-heading"><div class="name">Login do usuário</div><a href="#usuário-login-do-usuário-post" class="method post">POST</a><code class="uri">/login</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/login</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"bins22@ig.com.br"</span></span>,
   "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"1234576"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-    "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Login realizado com sucesso"</span></span>,
-    "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">67</span></span>,
-        "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"Bins"</span></span>,
-        "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"bins22@ig.com.br"</span></span>,
-        "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"$2a$10$Qk5RWCW9hFcssle8.Ro4PunagPKoKkaeAMw7.N45E7ViUHBw8Wxii"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-21 23:11:34"</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-21 23:12:57"</span></span>,
-        "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">[
-            {
-                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 1"</span></span>,
-                "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-                "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-            </span>},
-            {
-                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 2"</span></span>,
-                "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-                "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-            </span>},
-            {
-                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 3"</span></span>,
-                "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-                "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-            </span>},
-            {
-                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
-                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 4"</span></span>,
-                "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-                "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-            </span>},
-            {
-                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">5</span></span>,
-                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Front-end"</span></span>,
-                "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-                "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-            </span>},
-            {
-                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">6</span></span>,
-                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Back-end"</span></span>,
-                "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-                "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-            </span>},
-            {
-                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">7</span></span>,
-                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Mobile"</span></span>,
-                "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-                "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-            </span>},
-            {
-                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">8</span></span>,
-                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"DevOps"</span></span>,
-                "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-                "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-            </span>}
-        ]
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+  "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+      </span>}
+    ]</span>,
+    "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
     </span>}
-    <span class="hljs-string">"token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjQ4LCJpYXQiOjE1NTcwODQzMTN9.uJ-yVN3oAzuLQ7pz0PU4UK7DggGf1VGnXN3XZZzDZHk"</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Retorno da operação"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do usuário"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">username</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nome do usuário"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"E-mail do usuário, deve ser único"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">password</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Senha criptografada"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de criação"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de atualização"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Array de objetos Preference"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"tipo de token"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Token criptografado"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Tempo de vida do token"</span>
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados do token"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados do usuário"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Token criptografado"</span>
+    </span>}
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="preferences" class="resource-group"><h2 class="group-heading">Preferences <a href="#preferences" class="permalink">&para;</a></h2><div id="preferences-preferências-do-usuário" class="resource"><h3 class="resource-heading">Preferências do Usuário <a href="#preferences-preferências-do-usuário" class="permalink">&nbsp;&para;</a></h3><div id="preferences-preferências-do-usuário-get" class="action get"><h4 class="action-heading"><div class="name">Preferências do Usuário</div><a href="#preferences-preferências-do-usuário-get" class="method get">GET</a><code class="uri">/preferences</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/preferences</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
   {
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 1"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-  </span>},
-  {
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 2"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-  </span>},
-  {
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 3"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
   </span>}
-]</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="preferences-salvar-preferências-do-usuário" class="resource"><h3 class="resource-heading">Salvar Preferências do Usuário <a href="#preferences-salvar-preferências-do-usuário" class="permalink">&nbsp;&para;</a></h3><div id="preferences-salvar-preferências-do-usuário-post" class="action post"><h4 class="action-heading"><div class="name">Salvar Preferências do Usuário</div><a href="#preferences-salvar-preferências-do-usuário-post" class="method post">POST</a><code class="uri">/preferences/save</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/preferences/save</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="preferences-salvar-preferências-do-usuário" class="resource"><h3 class="resource-heading">Salvar Preferências do Usuário <a href="#preferences-salvar-preferências-do-usuário" class="permalink">&nbsp;&para;</a></h3><div id="preferences-salvar-preferências-do-usuário-post" class="action post"><h4 class="action-heading"><div class="name">Salvar Preferências do Usuário</div><a href="#preferences-salvar-preferências-do-usuário-post" class="method post">POST</a><code class="uri">/preferences/save</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/preferences/save</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">[
     <span class="hljs-number">1</span>,
     <span class="hljs-number">2</span>,
     <span class="hljs-number">3</span>
   ]
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"As preferências foram gravadas com sucesso"</span>
+  "<span class="hljs-attribute">Message</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">Message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Retorno da operação"</span>
+    </span>}
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="profile" class="resource-group"><h2 class="group-heading">Profile <a href="#profile" class="permalink">&para;</a></h2><p>Rotas referentes ao perfil do usuário</p>
 <div id="profile-perfil-do-usuário" class="resource"><h3 class="resource-heading">Perfil do Usuário <a href="#profile-perfil-do-usuário" class="permalink">&nbsp;&para;</a></h3><div id="profile-perfil-do-usuário-get" class="action get"><h4 class="action-heading"><div class="name">Retornar Dados do Usuário</div><a href="#profile-perfil-do-usuário-get" class="method get">GET</a><code class="uri">/profile</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/profile</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">48</span></span>,
-    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"Bins2"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"bins22@ig.com.br"</span></span>,
-    "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"$2a$10$faXNf12mh/f0wasp17JxLuaePwy2myAf/JRFEINesGTeq7oI4L3vW"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 16:13:41"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 16:13:41"</span>
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+      </span>}
+    ]</span>,
+    "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+    </span>}
   </span>}</span>,
   "<span class="hljs-attribute">userPreferences</span>": <span class="hljs-value">[
-    <span class="hljs-number">1</span>
+    <span class="hljs-string">"Hello, world!"</span>
   ]</span>,
   "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 1"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-    </span>},
-    {
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 2"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-    </span>},
-    {
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 3"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
     </span>}
   ]
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do usuário"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">username</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nome do usuário"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"E-mail do usuário, deve ser único"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">password</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Senha criptografada"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de criação"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de atualização"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Array de objetos Preference"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"tipo de token"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Token criptografado"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Tempo de vida do token"</span>
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados do token"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados do usuário"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">userPreferences</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"IDs das preferences do usuário"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Array de objetos Preference"</span>
+    </span>}
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="profile-perfil-do-usuário-put" class="action put"><h4 class="action-heading"><div class="name">Atualizar Perfil do Usuário</div><a href="#profile-perfil-do-usuário-put" class="method put">PUT</a><code class="uri">/profile</code></h4><h4>Example URI</h4><div class="definition"><span class="method put">PUT</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/profile</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"Bins Atualizado"</span></span>,
 }</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Usuário atualizado com sucesso!"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
   "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">67</span></span>,
-    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"Bins Atualizado"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"dia217@ig.com.br"</span></span>,
-    "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"$2a$10$Qk5RWCW9hFcssle8.Ro4PunagPKoKkaeAMw7.N45E7ViUHBw8Wxii"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-21 23:11:34"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-21 23:12:57"</span></span>,
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
     "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">[
       {
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 1"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-      </span>},
-      {
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 2"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-      </span>},
-      {
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 3"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-      </span>},
-      {
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Teste 4"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-      </span>},
-      {
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">5</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Front-end"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-      </span>},
-      {
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">6</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Back-end"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-      </span>},
-      {
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">7</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Mobile"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
-      </span>},
-      {
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">8</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"DevOps"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
       </span>}
-    ]
+    ]</span>,
+    "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Retorno da operação"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do usuário"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">username</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nome do usuário"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"E-mail do usuário, deve ser único"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">password</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Senha criptografada"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de criação"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de atualização"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">preferences</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Array de objetos Preference"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"tipo de token"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Token criptografado"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">refreshToken</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Tempo de vida do token"</span>
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados do token"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados do usuário"</span>
+    </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="files" class="resource-group"><h2 class="group-heading">Files <a href="#files" class="permalink">&para;</a></h2><p>Imagens dos Meetups</p>
 <div id="files-imagens-dos-meetups" class="resource"><h3 class="resource-heading">Imagens dos Meetups <a href="#files-imagens-dos-meetups" class="permalink">&nbsp;&para;</a></h3><div id="files-imagens-dos-meetups-get" class="action get"><h4 class="action-heading"><div class="name">Imagem do meetup</div><a href="#files-imagens-dos-meetups-get" class="method get">GET</a><code class="uri">/files/{id}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/files/<span class="hljs-attribute" title="id">1</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ID do arquivo</p>
 </dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">file</span>": <span class="hljs-value"><span class="hljs-string">"1558396610564.jpeg"</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"0_11b748_d4d498a0_XXL.jpg"</span></span>,
-    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"image"</span></span>,
-    "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"jpeg"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-20 20:56:50"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-20 20:56:50"</span></span>,
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">5</span>
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do arquivo"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nome do arquivo"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Tipo do arquivo"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">subtype</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Extensão do arquivo"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de criação"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de atualização"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados da imagem"</span>
+    </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="files-imagens-dos-meetups-delete" class="action delete"><h4 class="action-heading"><div class="name">Apagar Imagem do Meetup</div><a href="#files-imagens-dos-meetups-delete" class="method delete">DELETE</a><code class="uri">/files/{id}</code></h4><h4>Example URI</h4><div class="definition"><span class="method delete">DELETE</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/files/<span class="hljs-attribute" title="id">1</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ID do arquivo</p>
 </dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Arquivo excluído com sucesso "</span>
+  "<span class="hljs-attribute">Message</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">Message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Retorno da operação"</span>
+    </span>}
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="files-enviar-imagem-do-meetup" class="resource"><h3 class="resource-heading">Enviar Imagem do Meetup <a href="#files-enviar-imagem-do-meetup" class="permalink">&nbsp;&para;</a></h3><div id="files-enviar-imagem-do-meetup-post" class="action post"><h4 class="action-heading"><div class="name">Enviar Imagem do Meetup</div><a href="#files-enviar-imagem-do-meetup-post" class="method post">POST</a><code class="uri">/files/</code></h4><p>O envio do arquivo deve ser feito atráves de form-data (multipart/form-data). O nome da variável deve ser file</p>
 <h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/files/</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>-----BOUNDARY
 Content-Disposition: form-data; name=“file”; filename=“image.jpg”
@@ -234,136 +486,218 @@ AAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/<span class="hljs-number">2<
 -----BOUNDARY</code></pre>
 </div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">multipart/form-data; boundary=---BOUNDARY</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">file</span>": <span class="hljs-value"><span class="hljs-string">"1557088194989.jpeg"</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"0_11b748_d4d498a0_XXL.jpg"</span></span>,
-    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"image"</span></span>,
-    "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"jpeg"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span></span>,
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do arquivo"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nome do arquivo"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Tipo do arquivo"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">subtype</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Extensão do arquivo"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de criação"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de atualização"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados da imagem"</span>
+    </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="dashboard" class="resource-group"><h2 class="group-heading">Dashboard <a href="#dashboard" class="permalink">&para;</a></h2><p>Rota com os dados do Meetups</p>
 <div id="dashboard-dashboard" class="resource"><h3 class="resource-heading">Dashboard <a href="#dashboard-dashboard" class="permalink">&nbsp;&para;</a></h3><div id="dashboard-dashboard-get" class="action get"><h4 class="action-heading"><div class="name">Dashboard</div><a href="#dashboard-dashboard-get" class="method get">GET</a><code class="uri">/dashboard</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/dashboard</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-    "<span class="hljs-attribute">nextMeetups</span>": <span class="hljs-value">[
+  "<span class="hljs-attribute">nextMeetups</span>": <span class="hljs-value">[
     {
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"teste"</span></span>,
-        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"meetup de testes"</span></span>,
-        "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"São Paulo -SP"</span></span>,
-        "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-10T13:00:00.000Z"</span></span>,
-        "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:36:14"</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:36:14"</span></span>,
-        "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value"><span class="hljs-string">"http://192.168.9.1:3333/files/1"</span></span>,
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">file</span>": <span class="hljs-value"><span class="hljs-string">"1557088194989.jpeg"</span></span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"0_11b748_d4d498a0_XXL.jpg"</span></span>,
-            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"image"</span></span>,
-            "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"jpeg"</span></span>,
-            "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span></span>,
-            "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">__meta__</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
         </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+      </span>}
     </span>}
-]</span>,
-    "<span class="hljs-attribute">subscriptions</span>": <span class="hljs-value">[
-        <span class="hljs-string">"id"</span>: <span class="hljs-number">4</span>,
-        <span class="hljs-string">"title"</span>: <span class="hljs-string">"teste"</span>,
-        <span class="hljs-string">"description"</span>: <span class="hljs-string">"meetup de testes"</span>,
-        <span class="hljs-string">"location"</span>: <span class="hljs-string">"São Paulo -SP"</span>,
-        <span class="hljs-string">"datetime"</span>: <span class="hljs-string">"2019-05-10T13:00:00.000Z"</span>,
-        <span class="hljs-string">"file_id"</span>: <span class="hljs-number">2</span>,
-        <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2019-05-05 17:36:14"</span>,
-        <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2019-05-05 17:36:14"</span>,
-        <span class="hljs-string">"urlimagem"</span>: <span class="hljs-string">"http://192.168.9.1:3333/files/2"</span>,
-        <span class="hljs-string">"file"</span>: {
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-            "<span class="hljs-attribute">file</span>": <span class="hljs-value"><span class="hljs-string">"1557088194989.jpeg"</span></span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"0_11b748_d4d498a0_XXL.jpg"</span></span>,
-            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"image"</span></span>,
-            "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"jpeg"</span></span>,
-            "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span></span>,
-            "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span>
-        </span>},
-        <span class="hljs-string">"__meta__"</span>: {
-            "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">0</span>
-        </span>}]</span>,
-    "<span class="hljs-attribute">nextRecommended</span>": <span class="hljs-value">[
-        <span class="hljs-string">"id"</span>: <span class="hljs-number">5</span>,
-        <span class="hljs-string">"title"</span>: <span class="hljs-string">"teste"</span>,
-        <span class="hljs-string">"description"</span>: <span class="hljs-string">"meetup de testes"</span>,
-        <span class="hljs-string">"location"</span>: <span class="hljs-string">"São Paulo -SP"</span>,
-        <span class="hljs-string">"datetime"</span>: <span class="hljs-string">"2019-05-10T13:00:00.000Z"</span>,
-        <span class="hljs-string">"file_id"</span>: <span class="hljs-number">3</span>,
-        <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2019-05-05 17:36:14"</span>,
-        <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2019-05-05 17:36:14"</span>,
-        <span class="hljs-string">"urlimagem"</span>: <span class="hljs-string">"http://192.168.9.1:3333/files/3"</span>,
-        <span class="hljs-string">"file"</span>: {
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-            "<span class="hljs-attribute">file</span>": <span class="hljs-value"><span class="hljs-string">"1557088194989.jpeg"</span></span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"0_11b748_d4d498a0_XXL.jpg"</span></span>,
-            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"image"</span></span>,
-            "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"jpeg"</span></span>,
-            "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span></span>,
-            "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span>
-        </span>},
-        <span class="hljs-string">"__meta__"</span>: {
-            "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">0</span>
-        </span>}]</span>,
-    "<span class="hljs-attribute">search</span>": <span class="hljs-value">[
-        <span class="hljs-string">"id"</span>: <span class="hljs-number">5</span>,
-        <span class="hljs-string">"title"</span>: <span class="hljs-string">"teste"</span>,
-        <span class="hljs-string">"description"</span>: <span class="hljs-string">"meetup de testes"</span>,
-        <span class="hljs-string">"location"</span>: <span class="hljs-string">"São Paulo -SP"</span>,
-        <span class="hljs-string">"datetime"</span>: <span class="hljs-string">"2019-05-10T13:00:00.000Z"</span>,
-        <span class="hljs-string">"file_id"</span>: <span class="hljs-number">3</span>,
-        <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2019-05-05 17:36:14"</span>,
-        <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2019-05-05 17:36:14"</span>,
-        <span class="hljs-string">"urlimagem"</span>: <span class="hljs-string">"http://192.168.9.1:3333/files/3"</span>,
-        <span class="hljs-string">"file"</span>: {
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-            "<span class="hljs-attribute">file</span>": <span class="hljs-value"><span class="hljs-string">"1557088194989.jpeg"</span></span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"0_11b748_d4d498a0_XXL.jpg"</span></span>,
-            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"image"</span></span>,
-            "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"jpeg"</span></span>,
-            "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span></span>,
-            "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span>
-        </span>},
-        <span class="hljs-string">"__meta__"</span>: {
-            "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">0</span>
-        </span>}]
+  ]</span>,
+  "<span class="hljs-attribute">subscriptions</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+      </span>}
+    </span>}
+  ]</span>,
+  "<span class="hljs-attribute">nextRecommended</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+      </span>}
+    </span>}
+  ]</span>,
+  "<span class="hljs-attribute">search</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+      </span>}
+    </span>}
+  ]
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">nextMeetups</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Array dos próximos meetups"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">subscriptions</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Array dos meetups em que o usuário se inscreveu"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">nextRecommended</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Array dos meetups de acordo com as preferências do usuário"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">search</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Array dos meetups pesquisados pelo usuário (opcional)"</span>
+    </span>}
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="meetup" class="resource-group"><h2 class="group-heading">Meetup <a href="#meetup" class="permalink">&para;</a></h2><p>Dados do Meetup</p>
 <div id="meetup-dados-do-meetup" class="resource"><h3 class="resource-heading">Dados do Meetup <a href="#meetup-dados-do-meetup" class="permalink">&nbsp;&para;</a></h3><div id="meetup-dados-do-meetup-get" class="action get"><h4 class="action-heading"><div class="name">Ver Meetup</div><a href="#meetup-dados-do-meetup-get" class="method get">GET</a><code class="uri">/meetup/{id}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/meetup/<span class="hljs-attribute" title="id">1</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ID do Meetup</p>
 </dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">meetup</span>": <span class="hljs-value">[
     {
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"teste"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"meetup de testes"</span></span>,
-      "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"São Paulo -SP"</span></span>,
-      "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-10T13:00:00.000Z"</span></span>,
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
       "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:36:14"</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:36:14"</span></span>,
-      "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value"><span class="hljs-string">"http://192.168.9.1:3333/files/1"</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+      "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
       "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-        "<span class="hljs-attribute">file</span>": <span class="hljs-value"><span class="hljs-string">"1557088194989.jpeg"</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"0_11b748_d4d498a0_XXL.jpg"</span></span>,
-        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"image"</span></span>,
-        "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"jpeg"</span></span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span></span>,
-        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span>
+        "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+          "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+        </span>}
       </span>}</span>,
-      "<span class="hljs-attribute">__meta__</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">1</span>
       </span>}
     </span>}
   ]</span>,
   "<span class="hljs-attribute">subscription</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">meetup</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Dados do meetup"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">subscription</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Se o usuário está inscrito ou não"</span>
+    </span>}
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="meetup-dados-do-meetup-1" class="resource"><h3 class="resource-heading">Dados do Meetup <a href="#meetup-dados-do-meetup-1" class="permalink">&nbsp;&para;</a></h3><div id="meetup-dados-do-meetup-post" class="action post"><h4 class="action-heading"><div class="name">Cadastrar Meetup</div><a href="#meetup-dados-do-meetup-post" class="method post">POST</a><code class="uri">/meetup</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/meetup</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"teste"</span></span>,
   "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"meetup de testes"</span></span>,
@@ -376,46 +710,215 @@ AAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/<span class="hljs-number">2<
   ]</span>,
   "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-string">"1"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Meetup cadastrado com sucesso!"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"teste"</span></span>,
-    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"meetup de testes"</span></span>,
-    "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"São Paulo -SP"</span></span>,
-    "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-10 10:00"</span></span>,
-    "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-string">"1"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:36:14"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:36:14"</span></span>,
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span>
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Retorno da operação"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do meetup"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Título do meetup"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Descrição do meetup"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">location</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Local do meetup"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">datetime</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data e hora do meetup"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">file_id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do arquivo de imagem"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de criação"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de atualização"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Dados do meetup"</span>
+    </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="meetup-inscrição-no-meetup" class="resource"><h3 class="resource-heading">Inscrição no Meetup <a href="#meetup-inscrição-no-meetup" class="permalink">&nbsp;&para;</a></h3><div id="meetup-inscrição-no-meetup-post" class="action post"><h4 class="action-heading"><div class="name">Inscrição no Meetup</div><a href="#meetup-inscrição-no-meetup-post" class="method post">POST</a><code class="uri">/meetup/subscription</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/meetup/subscription</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">meetup_id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Sua inscrição foi registrada com sucesso!"</span>
+  "<span class="hljs-attribute">Message</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">Message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Retorno da operação"</span>
+    </span>}
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="meetup-confirmação-inscrição-meetup" class="resource"><h3 class="resource-heading">Confirmação Inscrição Meetup <a href="#meetup-confirmação-inscrição-meetup" class="permalink">&nbsp;&para;</a></h3><div id="meetup-confirmação-inscrição-meetup-post" class="action post"><h4 class="action-heading"><div class="name">Confirmação Inscrição Meetup</div><a href="#meetup-confirmação-inscrição-meetup-post" class="method post">POST</a><code class="uri">/meetup/confirmation</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://127.0.0.1:3000</span>/meetup/confirmation</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authentication</span>: <span class="hljs-string">Bearer JWT</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">meetup_id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">meetup</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-    "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"teste"</span></span>,
-    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"meetup de testes"</span></span>,
-    "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"São Paulo -SP"</span></span>,
-    "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-10T13:00:00.000Z"</span></span>,
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">datetime</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
     "<span class="hljs-attribute">file_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:36:14"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:36:14"</span></span>,
-    "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value"><span class="hljs-string">"http://192.168.9.1:3333/files/1"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+    "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
     "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-      "<span class="hljs-attribute">file</span>": <span class="hljs-value"><span class="hljs-string">"1557088194989.jpeg"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"0_11b748_d4d498a0_XXL.jpg"</span></span>,
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"image"</span></span>,
-      "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"jpeg"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2019-05-05 17:29:54"</span>
+      "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">subtype</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span></span>,
+        "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value"><span class="hljs-number">1</span>
     </span>}
   </span>}</span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Confirmação enviada com sucesso"</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 23 May 2019</p><script>/* eslint-env browser */
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Hello, world!"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">meetup</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">allOf</span>": <span class="hljs-value">[
+        {
+          "<span class="hljs-attribute">$ref</span>": <span class="hljs-value"><span class="hljs-string">"#/definitions/meta"</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do meetup"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Título do meetup"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Descrição do meetup"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Local do meetup"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">datetime</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data e hora do meetup"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">file_id</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do arquivo de imagem"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de criação"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de atualização"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">urlimagem</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"URL para o arquivo de imagem"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">file</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ID do arquivo"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nome do arquivo"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Tipo do arquivo"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">subtype</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Extensão do arquivo"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de criação"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Data de atualização"</span>
+                    </span>}
+                  </span>}</span>,
+                  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados da imagem"</span>
+                </span>}
+              </span>}</span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Objeto com os dados da imagem"</span>
+            </span>}
+          </span>}
+        </span>}
+      ]</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Dados do meetup"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Resultado da operação"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">definitions</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">patternProperties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute"></span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">subscriptions_count</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Total de inscritos no meetup"</span>
+            </span>}
+          </span>}
+        </span>}
+      </span>}
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 27 May 2019</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 

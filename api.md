@@ -27,6 +27,8 @@ API do desafio final da RocketSeat feita com AdonisJS + banco de dados MySQL!
 
 - Response 200 (application/json)
 
+	- Attributes (CreateUserResponse)
+	
 	- Body
 
 			{
@@ -62,6 +64,8 @@ API do desafio final da RocketSeat feita com AdonisJS + banco de dados MySQL!
 			}
 
 - Response 200 (application/json)
+
+	- Attributes (LoginResponse)
 
 	- Body
 
@@ -144,6 +148,8 @@ API do desafio final da RocketSeat feita com AdonisJS + banco de dados MySQL!
 
 - Response 200 (application/json)
 	
+	- Attributes(array[PreferenceUserResponse])
+	
 	- Body
 
 			[
@@ -187,6 +193,8 @@ API do desafio final da RocketSeat feita com AdonisJS + banco de dados MySQL!
 
 - Response 200 (application/json)
 
+	- Attributes(MessageResponse)
+	
 	- Body
 
 			{
@@ -209,6 +217,8 @@ Rotas referentes ao perfil do usuário
 
 - Response 200 (application/json)
 
+	- Attributes(ProfileResponse)
+	
 	- Body
 			
 
@@ -261,6 +271,8 @@ Rotas referentes ao perfil do usuário
 			}
 
 - Response 200 (application/json)
+
+	- Attributes(UpdateProfileResponse)
 
 	- Body
 	
@@ -341,6 +353,8 @@ Imagens dos Meetups
 
 - Response 200 (application/json)		
 
+	- Attributes(FileResponse)
+
 	- Body
 	
 			{
@@ -370,6 +384,8 @@ Imagens dos Meetups
 
 
 - Response 200 (application/json)
+
+	- Attributes(MessageResponse)
 
 	- Body			
 
@@ -403,6 +419,8 @@ O envio do arquivo deve ser feito atráves de form-data (multipart/form-data). O
 		
 - Response 200 (application/json)
 
+	- Attributes(FileResponse)
+
 	- Body
 	
 			{
@@ -433,34 +451,36 @@ Rota com os dados do Meetups
 
 - Response 200 (application/json)
 
+	- Attributes (DashboardResponse)
+
 	- Body			
 
 			{
 				"nextMeetups": [
-				{
-					"id": 3,
-					"title": "teste",
-					"description": "meetup de testes",
-					"location": "São Paulo -SP",
-					"datetime": "2019-05-10T13:00:00.000Z",
-					"file_id": 1,
-					"created_at": "2019-05-05 17:36:14",
-					"updated_at": "2019-05-05 17:36:14",
-					"urlimagem": "http://192.168.9.1:3333/files/1",
-					"file": {
-						"id": 1,
-						"file": "1557088194989.jpeg",
-						"name": "0_11b748_d4d498a0_XXL.jpg",
-						"type": "image",
-						"subtype": "jpeg",
-						"created_at": "2019-05-05 17:29:54",
-						"updated_at": "2019-05-05 17:29:54"
-					},
-					"__meta__": {
-						"subscriptions_count": 0
+					{
+						"id": 3,
+						"title": "teste",
+						"description": "meetup de testes",
+						"location": "São Paulo -SP",
+						"datetime": "2019-05-10T13:00:00.000Z",
+						"file_id": 1,
+						"created_at": "2019-05-05 17:36:14",
+						"updated_at": "2019-05-05 17:36:14",
+						"urlimagem": "http://192.168.9.1:3333/files/1",
+						"file": {
+							"id": 1,
+							"file": "1557088194989.jpeg",
+							"name": "0_11b748_d4d498a0_XXL.jpg",
+							"type": "image",
+							"subtype": "jpeg",
+							"created_at": "2019-05-05 17:29:54",
+							"updated_at": "2019-05-05 17:29:54"
+						},
+						"__meta__": {
+							"subscriptions_count": 0
+						}
 					}
-				}
-			],
+				],
 				"subscriptions": [
 					"id": 4,
 					"title": "teste",
@@ -482,7 +502,7 @@ Rota com os dados do Meetups
 					},
 					"__meta__": {
 						"subscriptions_count": 0
-					}],
+				}],
 				"nextRecommended": [
 					"id": 5,
 					"title": "teste",
@@ -504,8 +524,8 @@ Rota com os dados do Meetups
 					},
 					"__meta__": {
 						"subscriptions_count": 0
-					}],
-				"search": [
+				}],
+				"search": [{
 					"id": 5,
 					"title": "teste",
 					"description": "meetup de testes",
@@ -526,7 +546,7 @@ Rota com os dados do Meetups
 					},
 					"__meta__": {
 						"subscriptions_count": 0
-					}]
+				}]
 			}
 
 
@@ -549,6 +569,8 @@ Dados do Meetup
 
 - Response 200 (application/json)
 
+	- Attributes (ViewMeetupResponse)
+	
 	- Body	
 			
 			{
@@ -603,6 +625,8 @@ Dados do Meetup
 
 - Response 200 (application/json)
 
+	- Attributes (NewMeetupResponse)
+	
 	- Body	
 	
 			{
@@ -637,6 +661,8 @@ Dados do Meetup
 
 - Response 200 (application/json)
 
+	- Attributes(MessageResponse)
+
 	- Body	
 		
 			{
@@ -664,6 +690,8 @@ Dados do Meetup
 
 - Response 200 (application/json)
 
+	- Attributes (ConfirmMeetupResponse)
+
 	- Body	
 
 			{
@@ -689,3 +717,122 @@ Dados do Meetup
 				},
 				"message": "Confirmação enviada com sucesso"
 			}
+
+# Data Structures
+
+# Data Structures
+
+## UsuarioResponse (object)
+
+- id (number) - ID do usuário
+- username (string) - Nome do usuário
+- email (string) - E-mail do usuário, deve ser único
+- password (string) - Senha criptografada
+- created_at (string) - Data de criação
+- updated_at (string) - Data de atualização
+- preferences (array[PreferenceUserResponse]) - Array de objetos Preference
+- token (TokenResponse) - Objeto com os dados do token
+
+## PreferenceUserResponse (object)
+
+- id (number) - ID da preference
+- name (string) -  Nome da preference
+- created_at (string) - Data de criação
+- updated_at (string) - Data de atualização
+
+## TokenResponse (object)
+
+- type (string) - tipo de token
+- token (string) - Token criptografado
+- refreshToken (string) - Tempo de vida do token
+
+## LoginResponse (object)
+
+- message (string) - Retorno da operação
+- user (UsuarioResponse) - Objeto com os dados do usuário
+- token (string) - Token criptografado
+
+## CreateUserResponse (object)
+
+- message (string) - Retorno da operação
+- user (UsuarioResponse) - Objeto com os dados do usuário
+- token (TokenResponse) - Objeto com os dados do token
+
+## MessageResponse(object)
+
+- Message (string) - Retorno da operação
+
+## ProfileResponse (object)
+
+- user (UsuarioResponse) - Objeto com os dados do usuário
+- userPreferences (array[string]) - IDs das preferences do usuário
+- preferences (array[PreferenceUserResponse]) - Array de objetos Preference
+
+## UpdateProfileResponse  (object)
+
+- message (string) - Retorno da operação
+- user (UsuarioResponse) - Objeto com os dados do usuário
+
+## FileObject (object)
+
+- id (number) - ID do arquivo
+- name (string) - Nome do arquivo
+- type (string) - Tipo do arquivo
+- subtype (string) - Extensão do arquivo
+- created_at (string) - Data de criação
+- updated_at (string) - Data de atualização
+
+## FileResponse (object)
+
+- file (FileObject) - Objeto com os dados da imagem
+
+## MetaResponse (object)
+
+- subscriptions_count (number) - Total de inscritos no meetup
+
+## MeetupResponse (object)
+
+- id (number) - ID do meetup
+- title (string) - Título do meetup
+- description (string) - Descrição do meetup
+- location (string) - Local do meetup
+- datetime (string) - Data e hora do meetup
+- file_id (number) - ID do arquivo de imagem
+- created_at (string) - Data de criação
+- updated_at (string) - Data de atualização
+- urlimagem (string) - URL para o arquivo de imagem
+- file (FileResponse) - Objeto com os dados da imagem
+- __meta__ (MetaResponse) - Objeto com os inscrito no meetup
+
+## AddMeetupResponse (object)
+
+- id (number) - ID do meetup
+- title (string) - Título do meetup
+- description (string) - Descrição do meetup
+- location (string) - Local do meetup
+- datetime (string) - Data e hora do meetup
+- file_id (number) - ID do arquivo de imagem
+- created_at (string) - Data de criação
+- updated_at (string) - Data de atualização
+
+## ConfirmMeetupResponse (object)
+
+- meetup (MeetupResponse) - Dados do meetup
+- message (string) - Resultado da operação
+
+## NewMeetupResponse (object)
+
+- message (string) - Retorno da operação
+- data (AddMeetupResponse) - Dados do meetup
+
+## ViewMeetupResponse (object)
+
+- meetup (array[MeetupResponse]) - Dados do meetup
+- subscription (boolean) - Se o usuário está inscrito ou não
+
+## DashboardResponse (object)
+
+- nextMeetups (array[MeetupResponse]) - Array dos próximos meetups
+- subscriptions (array[MeetupResponse]) - Array dos meetups em que o usuário se inscreveu
+- nextRecommended (array[MeetupResponse]) - Array dos meetups de acordo com as preferências do usuário
+- search (array[MeetupResponse]) - Array dos meetups pesquisados pelo usuário (opcional)
