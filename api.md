@@ -444,6 +444,9 @@ Rota com os dados do Meetups
 
 - Request (application/json)
 
+	- Parameters
+		- s: `teste` (string, optional) - Título do meetup a ser pesquisado
+
 	- Headers
 
 			Authentication: Bearer JWT

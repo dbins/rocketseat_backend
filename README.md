@@ -1,6 +1,10 @@
 # DESAFIO FINAL - Backend Meetapp
 
-Este é o backend feito em AdonisJS com banco de dados MySQL. Este backend faz parte do desafio final. Este backend será consumido por uma aplicativo feito em React Native.
+Este é o backend feito em AdonisJS com banco de dados MySQL. Este backend faz parte do desafio final do bootcamp 4 da Rocketseat. Este backend será consumido por uma aplicativo feito em React Native.
+
+O aplicativo pode ser visto neste link:
+
+https://github.com/dbins/rocketseat_mobile
 
 ![Backend](imagens/backend.png)
 
@@ -35,7 +39,7 @@ Este é o backend feito em AdonisJS com banco de dados MySQL. Este backend faz p
 - Rodar a migration: adonis migration:run
 - Rodar a carga inicia de dados (seed): adonis seed
 - Para ativar o servidor: adonis serve --dev
-- O servidor vai subir no endereço http://127.0.0.1:3333. Isso pode ser alterado no arquivo .env localizado na raiz do servidor
+- O servidor vai subir no endereço http://127.0.0.1:3333. Isso pode ser alterado no arquivo .env localizado na raiz do projeto.
 
 ## Redis
 
