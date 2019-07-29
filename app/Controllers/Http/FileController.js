@@ -55,7 +55,7 @@ class FileController {
       await file.delete();
 
       return response
-        .status(201)
+        .status(200)
         .send({ message: "Arquivo excluído com sucesso " });
     } catch (err) {
       return response

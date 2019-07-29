@@ -22,7 +22,7 @@ class UserController {
     try {
       const user = await User.create(data);
       const token = await auth.attempt(data.email, data.password);
-      return response.status(201).json({
+      return response.status(200).json({
         message: "Usuário gravado com sucesso!",
         user: user,
         token: token
@@ -50,43 +50,52 @@ class UserController {
       const data_user = { username: username };
       if (password) data_user.password = password;
 
-      const user = await User.findByOrFail("id", user_id);
+      const user = await User.findBy("id", user_id);
+      if (user) {
+		user.merge(data_user);
+		await user.save();
+	  	
 
-      user.merge(data_user);
+		if (preferences && preferences.length > 0) {
+			await UserPreference.query()
+			  .where("user_id", user_id)
+			  .delete();
 
-      await user.save();
+			let selectedPreferences = [];
+			preferences.forEach(preference_id => {
+				selectedPreferences.push({
+					user_id: user_id,
+					preference_id: preference_id
+				});
+			});
 
-      if (preferences && preferences.length > 0) {
-        await UserPreference.query()
-          .where("user_id", user_id)
-          .delete();
+			await UserPreference.createMany(selectedPreferences);
+		}
 		
-		let selectedPreferences = [];
-        preferences.forEach(preference_id => {
-		  selectedPreferences.push({user_id: user_id, preference_id: preference_id})
-        });
-		
-		await UserPreference.createMany(selectedPreferences);
-		
-      }
-      //Retornando os dados atualizados!
-      const user_updated = await User.findByOrFail("id", user_id);
-      const preferences_updated = await UserPreference.query()
-        .select("preferences.*")
-        .innerJoin(
-          "preferences",
-          "user_preferences.preference_id",
-          "preferences.id"
-        )
-        .where("user_preferences.user_id", user_id)
-        .fetch();
-      user_updated.preferences = preferences_updated;
-      return response.status(201).json({
-        message: "Usuário atualizado com sucesso!",
-        user: user_updated
-      });
+		//Retornando os dados atualizados!
+		const user_updated = await User.findByOrFail("id", user_id);
+		const preferences_updated = await UserPreference.query()
+			.select("preferences.*")
+			.innerJoin(
+			  "preferences",
+			  "user_preferences.preference_id",
+			  "preferences.id"
+			)
+			.where("user_preferences.user_id", user_id)
+			.fetch();
+		  user_updated.preferences = preferences_updated;
+		  return response.status(200).json({
+			message: "Usuário atualizado com sucesso!",
+			user: user_updated
+		  });
+	  } else {
+		  return response.status(404).json({
+			message: "Usuário não localizado!",
+			user: user_updated
+		  });	
+	  }
     } catch (err) {
-      return response.status(err.status).send({ message: err.message });
+      return response.status(500).send({ message: err.message });
     }
   }
   /**

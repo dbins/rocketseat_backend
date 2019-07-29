@@ -31,7 +31,7 @@ class PreferenceController {
     });
 
     return response
-      .status(201)
+      .status(200)
       .json({ message: "As preferências foram gravadas com sucesso" });
   }
 }

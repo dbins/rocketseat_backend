@@ -59,6 +59,8 @@ https://github.com/dbins/rocketseat_mobile
 
 Para ver as rotas e o formato das requisições, consulte a documentação disponível no arquivo index.html localizado na raiz do projeto. Esta documentação foi criada usando a API Blueprint, o arquivo com a documentação se chama api.md e fica na raiz do projeto.
 
+Existe uma versão da documentação no formato Swagger, na raiz do projeto existe um arquivo chamado swagger.json. Foram feitos testes unitários com base na documentação utilizando Dredd.
+
 Um resumo das rotas pode ser visto abaixo:
 
 | Rota                 | Método | Descrição                      |

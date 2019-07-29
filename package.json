@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node ace test"
+    "test": "node ace test",
+    "kue": "node ace kue:listen"
   },
   "keywords": [
     "adonisjs",
@@ -33,8 +34,10 @@
     "@adonisjs/shield": "^1.0.8",
     "@adonisjs/validator": "^5.0.6",
     "adonis-kue": "^5.0.1",
+    "faker": "^4.1.0",
     "moment": "^2.24.0",
-    "mysql": "^2.17.1"
+    "mysql": "^2.17.1",
+    "youch": "^2.0.10"
   },
   "devDependencies": {},
   "autoload": {

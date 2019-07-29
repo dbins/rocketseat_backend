@@ -72,10 +72,8 @@ class MeetupController {
       .orderBy("datetime", "ASC")
       .withCount("subscriptions")
       .fetch();
-	  
-	  
-	  
-	  const searchMeetups = await Meetup.query()
+
+    const searchMeetups = await Meetup.query()
       .select("meetups.*")
       .with("file")
       .where("datetime", ">", now)
@@ -86,12 +84,12 @@ class MeetupController {
       .orderBy("datetime", "ASC")
       .withCount("subscriptions")
       .fetch();
-    
-    return response.status(201).json({
+
+    return response.status(200).json({
       nextMeetups: nextMeetups.toJSON(),
       subscriptions: subscriptions.toJSON(),
       nextRecommended: nextRecommended.toJSON(),
-	  search: searchMeetups.toJSON()
+      search: searchMeetups.toJSON()
     });
   }
 
@@ -125,8 +123,10 @@ class MeetupController {
         });
       }
 
+      meetup.file_id = parseInt(meetup.file_id);
+
       return response
-        .status(201)
+        .status(200)
         .json({ message: "Meetup cadastrado com sucesso!", data: meetup });
     } catch (err) {
       //console.log(err);
@@ -154,7 +154,7 @@ class MeetupController {
           Env.get("APP_URL") + "/files/" + meetup.rows[0].file_id;
       }
     }
-    return response.status(201).json({ meetup, subscription });
+    return response.status(200).json({ meetup, subscription });
   }
 
   async subscription({ request, response, auth }) {
@@ -207,7 +207,7 @@ class MeetupController {
     //});
 
     return response
-      .status(201)
+      .status(200)
       .json({ message: "Sua inscrição foi registrada com sucesso!" });
   }
 

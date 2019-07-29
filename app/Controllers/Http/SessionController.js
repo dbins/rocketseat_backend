@@ -23,14 +23,18 @@ class SessionController {
     }
 
     const token = await auth.attempt(email, password);
-	
-	const preferences = await UserPreference.query()
+
+    const preferences = await UserPreference.query()
       .select("preferences.*")
-	  .innerJoin("preferences", "user_preferences.preference_id", "preferences.id")
+      .innerJoin(
+        "preferences",
+        "user_preferences.preference_id",
+        "preferences.id"
+      )
       .where("user_preferences.user_id", user.id)
-	  .fetch();
-	user.preferences = preferences;
-	return response.status(201).json({
+      .fetch();
+    user.preferences = preferences;
+    return response.status(200).json({
       message: "Login realizado com sucesso",
       token: token.token,
       user: user
